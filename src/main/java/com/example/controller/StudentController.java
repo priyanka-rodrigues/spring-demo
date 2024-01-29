@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
 
+//This is student controller
 @RestController
 @RequestMapping("/student")
 class StudentController {
