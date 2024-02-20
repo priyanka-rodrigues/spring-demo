@@ -9,11 +9,9 @@ import com.example.repository.SubjectRepository;
 import com.example.request.SubjectCreateRequest;
 import com.example.request.StudentCreateRequest;
 import com.example.request.StudentUpdateRequest;
-import com.example.response.SubjectResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -28,6 +26,7 @@ public class StudentService {
 
     @Autowired
     SubjectRepository subjectRepository;
+
 
     public List<Student> getStudentList() {
         return studentRepo.findAll();
@@ -132,7 +131,6 @@ public class StudentService {
         }
 
         subjectRepository.saveAll(subjectList);
-
         student.setSubjectList(subjectList);
         //System.out.println(student.getId());
         return student;
